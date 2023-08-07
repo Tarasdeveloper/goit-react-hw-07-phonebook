@@ -12,8 +12,6 @@ const ContactList = () => {
   useEffect(() => {
     dispatch(getContacts());
   }, [dispatch]);
-  // const contacts = useSelector(state => state.phonebook.contacts);
-  // const filterTerm = useSelector(state => state.phonebook.filter);
 
   const contactsFilteredByName = contacts?.filter(contact =>
     contact.name.toLowerCase().includes((filterTerm || '').toLowerCase())
